@@ -1,6 +1,7 @@
 import sys
 import random
 
+
 class MovieLibrary:
     def __init__(self, title, year, genre):
         self.title = title
@@ -77,6 +78,7 @@ class SeriesLibrary:
         else:
             print("No series on list")
 
+    #by_title = sorted(movies, key=lambda movies: movie.title)
     def get_movies(self):
         pass
 
@@ -117,6 +119,12 @@ print(search("Heat", library))
 def generate_views():
     n = len(library)
     a = random.randint(0,n-1)
-    library[a].play()
+    vol = random.randint(1, 100)
+    for _ in range(vol):
+        library[a].play()
+
+
+for _ in range(10):
+    generate_views()
 
 
